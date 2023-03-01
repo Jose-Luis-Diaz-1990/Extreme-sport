@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'CrossX';
+    src: url('../../../assets/fonts/CrossX.ttf');
+}
+
+.flexBody {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.homeBack {
+
+    height: 507px;
+    background-image: url('../../../assets/image/Home-Background.jpg');
+    background-size: cover;
+    
+}
+
+.iconText {
+    text-align: initial;
+    margin-left: 201px;
+    font-family: 'CrossX' !important;
+    font-size: 100px !important;
+}
+
+.xDecoration {
+    font-size: 120px !important;
+    color: #D7FC69;
+    margin: 0 5px 0 5px;
+}
+
+.video {
+
+
+}
+

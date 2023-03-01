@@ -1,0 +1,22 @@
+.block{
+    display: flex;
+    flex-direction: row;
+    background-color: #D7FC69;
+    justify-content: center;
+    
+    &__div{
+        display: flex;
+        flex-direction: row;
+
+        &_img{
+            width: 70px;
+        }
+
+        &_a{
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            margin-top: 11%;
+        }
+    }
+}

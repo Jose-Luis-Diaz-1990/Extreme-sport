@@ -1,0 +1,5 @@
+<div class="sport" *ngIf="sport" (click)="navigateToDetail()">
+  <h2 class="sport__title">{{ sport.title | titlecase }}</h2>
+  <img class="sport__image" [src]="sport.image" />
+  <p class="sport__author">{{sport.authors.author}}</p>
+</div>

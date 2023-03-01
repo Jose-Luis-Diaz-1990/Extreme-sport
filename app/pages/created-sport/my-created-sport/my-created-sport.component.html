@@ -1,0 +1,21 @@
+<div >
+  <select
+      class="block__select"
+      name="Author"
+      required
+      [(ngModel)]="authorSelect"
+     >
+      <option default value="">Autor</option>
+      <option
+          *ngFor="let author of authorSl"
+          [value]="author"
+      >{{ author }}</option>
+  </select>
+</div>
+<div class="block"> 
+  <!-- Genero el listado de sport con un bucle for-->
+<app-my-sport *ngFor="let One of sport | filterAuthor:authorSelect " 
+  [sport]="One" 
+  (onRemove)="removeSport(One.id)
+  "></app-my-sport>
+</div>

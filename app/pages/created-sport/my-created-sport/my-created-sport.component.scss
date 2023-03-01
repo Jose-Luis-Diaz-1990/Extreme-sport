@@ -1,0 +1,13 @@
+.block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 10% 0 10%;
+
+    &__select{
+        margin: 2% 0 2% 38%;
+        width: 400px;
+        height: 23px;
+    }
+}
+

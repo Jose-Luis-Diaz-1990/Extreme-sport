@@ -1,0 +1,119 @@
+<button class="block__button" (click)="navigateToMyCreation()">administrar deportes</button>
+<div class="block">
+  <div class="block__left">
+    <form
+      *ngIf="sportForm"
+      (submit)="createdNewSport()"
+      [formGroup]="sportForm"
+      name="sport"
+    >
+      <div>
+        <input
+          class="from__input"
+          placeholder="Title"
+          type="text"
+          required
+          formControlName="title"
+        />
+        <p
+          *ngIf="!sportForm.get('title')?.valid
+                && sportForm.get('title')?.dirty
+                && sportForm.get('title')?.errors?.['required']
+            "
+          [ngStyle]="{ color: 'red' }"
+        >
+          El titulo es un campo requerido
+        </p>
+      </div>
+      <div>
+        <input
+          class="from__input"
+          placeholder="Description"
+          type="text"
+          required
+          formControlName="description"
+        />
+        <p
+          *ngIf="!sportForm.get('description')?.valid
+                && sportForm.get('description')?.dirty
+                && sportForm.get('description')?.errors?.['required']
+            "
+          [ngStyle]="{ color: 'red' }"
+        >
+          La descripción es un campo requerido
+        </p>
+      </div>
+      <div>
+        <input
+          class="from__input"
+          placeholder="Equipment"
+          type="text"
+          required
+          formControlName="equipment"
+        />
+        <p
+          *ngIf="!sportForm.get('equipment')?.valid
+                && sportForm.get('equipment')?.dirty
+                && sportForm.get('equipment')?.errors?.['required']
+            "
+          [ngStyle]="{ color: 'red' }"
+        >
+          La equipación es un campo requerido
+        </p>
+      </div>
+      <div>
+        <input
+          class="from__input"
+          placeholder="Author"
+          type="text"
+          required
+          formControlName="author"
+        />
+        <p
+          *ngIf="!sportForm.get('author')?.valid
+                && sportForm.get('author')?.dirty
+                && sportForm.get('author')?.errors?.['required']
+            "
+          [ngStyle]="{ color: 'red' }"
+        >
+          El autor es un campo requerido
+        </p>
+      </div>
+      <div>
+        <input
+          class="from__input"
+          placeholder="Image"
+          type="text"
+          required
+          formControlName="image"
+        />
+        <p
+          *ngIf="!sportForm.get('image')?.valid
+                && sportForm.get('image')?.dirty
+                && sportForm.get('image')?.errors?.['required']
+            "
+          [ngStyle]="{ color: 'red' }"
+        >
+          La imagen es obligatoria
+        </p>
+      </div>
+      <button class="form__button" type="submit" [disabled]="!sportForm.valid">
+        {{ canEdit ? "Editar producto" : "crear deporte" }}
+      </button>
+    </form>
+  </div>
+  <div class="block__rigth">
+    <p>{{ titleBi }}</p>
+    <div
+      *ngIf="imageBi"
+      [ngStyle]="{
+        'background-image': 'url(' + imageBi + ')'
+      }"
+      class="prewiev__form"
+    ></div>
+    <p>{{ descriptionBi }}</p>
+    <p>{{ equipmentBi }}</p>
+    <p>{{ authorBi }}</p>
+  </div>
+</div>
+

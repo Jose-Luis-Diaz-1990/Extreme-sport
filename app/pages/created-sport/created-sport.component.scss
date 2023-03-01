@@ -1,0 +1,33 @@
+.prewiev__form{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.block{
+    display: flex;
+    flex-direction: row;
+    height: 74vh;
+
+    &__left{
+        display: flex;
+        width: 50%;
+        justify-content: space-evenly;
+        margin-top: 3%;
+    
+    }
+
+    &__rigth{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 3% 0 3% 0;
+  
+    }
+
+    &__button{
+        margin: 2% 44% 0 44%;
+        height: 50px;
+        width: 200px;
+    }
+}

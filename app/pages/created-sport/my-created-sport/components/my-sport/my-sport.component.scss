@@ -1,0 +1,22 @@
+.block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &__image{
+        width: 300px;
+        height: 300px;
+    }
+
+    &__down{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 6% 0 14% 0;
+        
+    }
+    
+    &__button{
+        width: 80px;
+    }
+}

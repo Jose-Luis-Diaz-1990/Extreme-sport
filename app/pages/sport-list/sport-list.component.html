@@ -1,0 +1,20 @@
+<div class="block">
+  <div class="block__input">
+    <!-- Creo el input en el que se hace el filtrado de la lista con la variable sportName iniciada como string vacio -->
+    <input class="block__input_in" placeholder="Filter sport" [(ngModel)]="sportName" />
+  </div>
+  <div class="block__list">
+    <!-- Genero el listado de sport con un bucle for y aplico al listado dos pipe:
+  1º Filtro por el titulo del sport
+  2º Filtro por página
+  -->
+    <app-sport
+      *ngFor="let oneSport of sport | filter : sportName | pagination : page"
+      [sport]="oneSport"
+    ></app-sport>
+  </div>
+  <div class="block__button">
+    <button class="block__button_b" (click)="previousPage()">Previous</button>
+    <button class="block__button_b" (click)="nextPage()">Next</button>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+span{
+    font-weight: 800;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    margin-top: 6%;
+
+    &__left{
+        width: 50%;
+        padding: 2%;
+        background-image: url('../../../../../assets/image/Home-body-second.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__rigth{
+        width: 50%;
+        padding: 2%;
+
+        &_h{
+            margin-bottom: 4%;
+            font-weight: 600; 
+        }
+
+        &_ul{
+            text-align: center;
+
+            &_li{
+                margin-bottom: 2%; 
+                text-align: justify;
+                padding: 0 10% 0 10%;
+            }
+        }
+    }
+
+}

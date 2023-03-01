@@ -1,0 +1,20 @@
+.block{
+    margin-top: 5%;
+    padding: 2% 10% 2% 10%;
+    background-color: #D7FC69;
+
+
+    &__h{
+        margin-bottom: 4%;
+        font-weight: 600;
+    }
+
+    &__p{
+        text-align: unset;
+        margin-top: 3%;
+    }
+
+    &__img{
+        margin-top: 5%;
+    }
+}
